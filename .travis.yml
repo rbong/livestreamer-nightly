@@ -7,7 +7,7 @@ python:
 script: 
     - virtualenv venv
     - source venv/bin/activate
-    - cd livestreamer && python setup.py install && cd ..
+    - cd livestreamer && python setup.py -q install && cd ..
     - ./test.sh
 
 addons:
