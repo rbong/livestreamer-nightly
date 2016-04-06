@@ -4,22 +4,12 @@ python:
   - 2.6
   - 2.7
   - 3.3
-script: python setup.py test
+before_script:
+    - cd livestreamer && sudo python setup.py install
+script: test.sh
 
 addons:
   apt:
     packages:
-      - nsis
-
-install:
-  - travis_retry pip install requests argparse --use-mirrors
-  - curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash
-
-after_success:
-  - bash .travis/build-win32.sh
-
-env:
-  global:
-    - ARTIFACTS_S3_REGION=eu-west-1
-    - ARTIFACTS_S3_BUCKET=livestreamer-builds
-
+      - ffmpeg
+      - rtmpdump
