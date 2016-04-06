@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "starting stream test."
 echo "starting ffmpeg in background..."
 (ffmpeg -loglevel warning -f lavfi -i nullsrc=s=1280x720 -framerate 25 -t 60 -f flv "rtmp://broadcast.castamp.com/live/livestreamer_yp5bta" 2>&1 | while read line; do echo "[FFMPEG]" $line; done) && echo "...ffmpeg exited with code $?." &
 echo "starting livestreamer..."

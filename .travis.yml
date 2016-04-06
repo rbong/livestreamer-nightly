@@ -4,9 +4,9 @@ python:
   - 2.6
   - 2.7
   - 3.3
-before_script:
+script: 
     - cd livestreamer && sudo python setup.py install
-script: test.sh
+    - test.sh
 
 addons:
   apt:
