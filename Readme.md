@@ -6,6 +6,6 @@ branches.
 My Livestreamer plugins can be found in different branches
 [here](https://github.com/rbong/livestreamer).
 
-## Castamp status
+## Streamup status
 
-[![Build Status](https://travis-ci.org/rbong/livestreamer-nightly.svg?branch=castamp)](https://travis-ci.org/rbong/livestreamer-nightly)
+[![Build Status](https://travis-ci.org/rbong/livestreamer-nightly.svg?branch=streamup)](https://travis-ci.org/rbong/livestreamer-nightly)

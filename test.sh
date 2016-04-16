@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 echo "starting stream test."
 echo "starting ffmpeg in background..."
-(ffmpeg -loglevel warning -i testvid.flv -f flv "rtmp://broadcast.castamp.com/live/livestreamer_yp5bta" 2>&1 | while read line; do echo "[FFMPEG]" $line; done) && echo "...ffmpeg exited with code $?." &
+(ffmpeg -loglevel warning -i testvid.flv -f flv "rtmp://origin.streamuplive.com/app/zjJz8SGg4cyT6wDDG9eg" 2>&1 | while read line; do echo "[FFMPEG]" $line; done) && echo "...ffmpeg exited with code $?." &
 echo "starting livestreamer..."
-ret=$(livestreamer "http://www.castamp.com/embed.php?c=livestreamer" best -QO)
+ret=$(livestreamer "http://www.streamup.com/livestreamer" best -QO)
 stat=$?
 echo "...livestreamer exited with code $?."
 if (( $stat )); then exit $stat; fi
